@@ -11,6 +11,8 @@ import {CalendarModule} from 'primeng/calendar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardModule} from 'primeng/card';
 import { MovieComponent } from './movie/movie.component';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { MovieComponent } from './movie/movie.component';
     AppComponent,
     BookDataComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { MovieComponent } from './movie/movie.component';
     HttpClientModule,
     BrowserAnimationsModule,
     CalendarModule,
-    CardModule
+    CardModule,
+    VirtualScrollerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

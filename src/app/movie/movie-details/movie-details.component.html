@@ -1,0 +1,29 @@
+<div class="container content">
+
+    <button style="margin-bottom: 30px !important;" routerLink="/movies" pButton type="button" label="Back"></button>
+
+    <h1>Movie Details</h1>
+
+    <div class="ui-g container" style="margin-top: 20px !important;">
+        <div class="ui-g-3">
+            <img style="width: 80%;" src="{{'https://image.tmdb.org/t/p/w185' + movieInfos.poster_path}}">
+        </div>
+
+        <div class="ui-g-6">
+            <h2>{{movieInfos.original_title}}</h2>
+            <br>
+            <h4>Overview</h4>
+            <p>{{movieInfos.overview}}</p>
+            <br>
+            <h4>Rate</h4>
+            <p>{{movieInfos.vote_average}} / 10</p>
+            <br>
+            <h4>Vote count</h4>
+            <p>{{movieInfos.vote_count}}</p>
+            <br>
+            <h4>Release date</h4>
+            <p>{{movieInfos.release_date}}</p>
+        </div>
+    </div>
+
+</div>

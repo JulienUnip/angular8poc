@@ -16,13 +16,10 @@
                 <p>{{movie.overview}}</p>
 
                 <p-footer>
-                    <button pButton type="button" label="More infos" style="margin-right: .25em"></button>
+                    <button (click)="goToMovieDetails(movie.id)" pButton type="button" label="More infos" style="margin-right: .25em"></button>
                 </p-footer>
             </p-card>
         </div>
     </div>
-
-
-
 
 </div>
