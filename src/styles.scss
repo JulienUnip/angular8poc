@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+*, html, body {
+    margin: 0 !important;
+    padding: 0;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.container {
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.content {
+    margin-top: 120px !important;
+}
