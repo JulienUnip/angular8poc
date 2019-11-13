@@ -13,6 +13,7 @@ import {CardModule} from 'primeng/card';
 import { MovieComponent } from './movie/movie.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MovieDetailsComponent } from './movie/movie-details/movie-details.compo
     BrowserAnimationsModule,
     CalendarModule,
     CardModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    ProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,25 +1,32 @@
 <div class="container content">
-    <h1>Movies</h1>
+  <h1>Movies</h1>
 
-    <br>
+  <br>
 
-    <h3>Search a movie</h3>
-    <input style="width: 300px;height: 50px;" type="text" pInputText placeholder="Movie" [(ngModel)]="movie" (ngModelChange)="changeMovie(movie)" />
+  <h3>Search a movie</h3>
+  <input style="width: 300px;height: 50px;" type="text" pInputText placeholder="Movie" [(ngModel)]="movie"
+    (ngModelChange)="changeMovie(movie)" />
 
-    <div class="ui-g" style="margin-top: 20px !important;">
-        <div *ngFor="let movie of moviesList;" class="ui-lg-4 ui-md-6 ui-sm-12">
-            <p-card header="{{movie.original_title}}" subheader="{{movie.vote_average}} / 10" [style]="{width: '360px'}" styleClass="ui-card-shadow">
-                <p-header>
-                    <img src="Card" src="{{'https://image.tmdb.org/t/p/w185' + movie.poster_path}}">
-                </p-header>
+  <div *ngIf="showSpinner" style="display: flex; justify-content: center; margin-top: 100px !important;">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
 
-                <p>{{movie.overview}}</p>
+  <div class="ui-g" style="margin-top: 20px !important;">
+    <div *ngFor="let movie of moviesList;" class="ui-lg-4 ui-md-6 ui-sm-12">
+      <p-card header="{{movie.original_title}}" subheader="{{movie.vote_average}} / 10" [style]="{width: '360px'}"
+        styleClass="ui-card-shadow">
+        <p-header>
+          <img src="Card" src="{{'https://image.tmdb.org/t/p/w185' + movie.poster_path}}">
+        </p-header>
 
-                <p-footer>
-                    <button (click)="goToMovieDetails(movie.id)" pButton type="button" label="More infos" style="margin-right: .25em"></button>
-                </p-footer>
-            </p-card>
-        </div>
+        <p>{{movie.overview}}</p>
+
+        <p-footer>
+          <button (click)="goToMovieDetails(movie.id)" pButton type="button" label="More infos"
+            style="margin-right: .25em"></button>
+        </p-footer>
+      </p-card>
     </div>
+  </div>
 
 </div>

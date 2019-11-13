@@ -4,7 +4,11 @@
 
     <h1>Movie Details</h1>
 
-    <div class="ui-g container" style="margin-top: 20px !important;">
+    <div *ngIf="showSpinner" style="display: flex; justify-content: center; margin-top: 100px !important;">
+        <p-progressSpinner></p-progressSpinner>
+    </div>
+
+    <div *ngIf="!showSpinner" class="ui-g container" style="margin-top: 20px !important;">
         <div class="ui-g-3">
             <img style="width: 80%;" src="{{'https://image.tmdb.org/t/p/w185' + movieInfos.poster_path}}">
         </div>

@@ -13,15 +13,13 @@ export class MovieDetailsComponent implements OnInit {
   constructor(private movieDetailsService: MovieDetailService, private route: ActivatedRoute) { }
 
   movieInfos;
+  showSpinner: boolean = true;
 
   ngOnInit() {
     let movieId = parseInt(this.route.snapshot.paramMap.get('id'));
     this.movieDetailsService.getMovie(movieId).then(
-      //res => console.log("result movie", res),
-      // res => console.log("resin comp", res),
       res => this.movieInfos = res
-
-    );
-  }
+    ).then(() => this.showSpinner = false)
+  };
 
 }

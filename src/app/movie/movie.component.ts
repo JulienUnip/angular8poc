@@ -13,6 +13,7 @@ export class MovieComponent implements OnInit {
 
   defaultMovieName = "Avenger";
   moviesList;
+  showSpinner: boolean = true;
 
   ngOnInit() {
       let movies = [];
@@ -20,8 +21,8 @@ export class MovieComponent implements OnInit {
       .then(res => res.forEach(function(element) {
         movies.push(element);
       }))
+      .then(() => this.showSpinner = false)
       this.moviesList = movies;
-      console.log(this.moviesList)
   }
 
   changeMovie(movieName) {
@@ -31,11 +32,11 @@ export class MovieComponent implements OnInit {
       .then(res => res.forEach(function(element) {
         movies.push(element);
       }))
+      .then(() => this.showSpinner = false)
       this.moviesList = movies;
   };
 
   goToMovieDetails(movieId) {
-    console.log(movieId);
     this.router.navigate(['/movie', movieId]);
   };
 
