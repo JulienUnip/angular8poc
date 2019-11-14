@@ -14,6 +14,10 @@ import { MovieComponent } from './movie/movie.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {PaginatorModule} from 'primeng/paginator';
+import { ChartjsComponent } from './chartjs/chartjs.component';
+import {ChartModule} from 'primeng/chart';
+
 
 
 @NgModule({
@@ -22,7 +26,8 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     BookDataComponent,
     HomeComponent,
     MovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    ChartjsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     CalendarModule,
     CardModule,
     VirtualScrollerModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    PaginatorModule,
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

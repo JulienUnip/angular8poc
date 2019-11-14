@@ -1,4 +1,4 @@
-<div class="container content">
+<div class="_container content">
 
     <button style="margin-bottom: 30px !important;" routerLink="/movies" pButton type="button" label="Back"></button>
 
@@ -8,12 +8,12 @@
         <p-progressSpinner></p-progressSpinner>
     </div>
 
-    <div *ngIf="!showSpinner" class="ui-g container" style="margin-top: 20px !important;">
-        <div class="ui-g-3">
+    <div *ngIf="!showSpinner" class="row _container" style="margin-top: 20px !important;">
+        <div class="col-3">
             <img style="width: 80%;" src="{{'https://image.tmdb.org/t/p/w185' + movieInfos.poster_path}}">
         </div>
 
-        <div class="ui-g-6">
+        <div class="col-9">
             <h2>{{movieInfos.original_title}}</h2>
             <br>
             <h4>Overview</h4>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../services/movie/movie.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
@@ -14,6 +15,7 @@ export class MovieComponent implements OnInit {
   defaultMovieName = "Avenger";
   moviesList;
   showSpinner: boolean = true;
+  totalResult;
 
   ngOnInit() {
       let movies = [];
@@ -21,7 +23,7 @@ export class MovieComponent implements OnInit {
       .then(res => res.forEach(function(element) {
         movies.push(element);
       }))
-      .then(() => this.showSpinner = false)
+      .then(() => this.showSpinner = false);
       this.moviesList = movies;
   }
 
@@ -32,7 +34,7 @@ export class MovieComponent implements OnInit {
       .then(res => res.forEach(function(element) {
         movies.push(element);
       }))
-      .then(() => this.showSpinner = false)
+      .then(() => this.showSpinner = false);
       this.moviesList = movies;
   };
 
