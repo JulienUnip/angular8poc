@@ -17,7 +17,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {PaginatorModule} from 'primeng/paginator';
 import { ChartjsComponent } from './chartjs/chartjs.component';
 import {ChartModule} from 'primeng/chart';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,9 +29,11 @@ import {ChartModule} from 'primeng/chart';
     HomeComponent,
     MovieComponent,
     MovieDetailsComponent,
-    ChartjsComponent
+    ChartjsComponent,
+    FormComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     TableModule,
@@ -42,6 +46,7 @@ import {ChartModule} from 'primeng/chart';
     ProgressSpinnerModule,
     PaginatorModule,
     ChartModule,
+    AngularFontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

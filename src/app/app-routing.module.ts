@@ -5,6 +5,7 @@ import { BookDataComponent } from './book-data/book-data.component';
 import { MovieComponent } from './movie/movie.component';
 import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
 import { ChartjsComponent } from './chartjs/chartjs.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'movies', component: MovieComponent },
   { path: 'movie/:id', component: MovieDetailsComponent },
   { path: 'charts', component: ChartjsComponent },
+  { path: 'form', component: FormComponent },
 ];
 
 @NgModule({
