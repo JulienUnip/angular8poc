@@ -2,35 +2,98 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 @import '../node_modules/primeicons/primeicons.css';
 
-*, html, body {
-    margin: 0 !important;
-    padding: 0;
-    font-family: 'Nunito', sans-serif;
+*,
+html,
+body {
+  margin: 0 !important;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.bars {
+  margin-top: 13px !important;
+  display: none !important;
+  color: #FFF;
+  font-size: 45px !important;
+  cursor: pointer;
+  &:hover {
+      transition: 0.5s;
+      opacity: 0.8;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  width: 300px;
+  background-color: #FFF;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  margin-top: 75px !important;
+  box-shadow: 3px 3px 6px -4px rgba(0,0,0,0.75);
+  .link_nav {
+    border-bottom: 1px solid #333;
+  }
+  ul {
+    li {
+      a {
+        color: #000 !important;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.logo {
+  display: block !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .bars {
+    display: block !important;
+  }
+
+  .logo {
+    display: none !important;
+  }
+
+  nav {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .mobile-nav {
+    display: none !important;
+  }
 }
 
 .content {
-    margin-top: 120px !important;
+  margin-top: 120px !important;
 }
 
 ._container {
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
 }
 
 @keyframes ui-progress-spinner-color {
-    100%,
-    0% {
-        stroke: #d62d20;
-    }
-    40% {
-        stroke: #0057e7;
-    }
-    66% {
-        stroke: #008744;
-    }
-    80%,
-    90% {
-        stroke: #ffa700;
-    }
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+
+  40% {
+    stroke: #0057e7;
+  }
+
+  66% {
+    stroke: #008744;
+  }
+
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
 }
