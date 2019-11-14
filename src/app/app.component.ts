@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
       $("#menu").click(function(){
         $(".mobile-nav").toggle(200);
       });
+
+      $('#close-nav').click(function() {
+        $(".mobile-nav").toggle(200);
+      });
     });
   };
 
