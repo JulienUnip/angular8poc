@@ -1,0 +1,10 @@
+<div class="_container content">
+    <h1>Parent view</h1>
+
+    <h3>Message {{ message }}</h3>
+
+    <div class="mt-3"></div>
+
+    <!-- Component child -->
+    <app-child (childEvent)="message=$event" [parentData]="name"></app-child>
+</div>

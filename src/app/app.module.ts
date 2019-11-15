@@ -20,6 +20,8 @@ import {ChartModule} from 'primeng/chart';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MovieComponent,
     MovieDetailsComponent,
     ChartjsComponent,
-    FormComponent
+    FormComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     ReactiveFormsModule,
