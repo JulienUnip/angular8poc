@@ -3,12 +3,13 @@
   <img class="logo" src="assets/images/angular.png" alt="">
   <nav>
     <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/books">Books</a></li>
-      <li><a routerLink="/movies">Movies</a></li>
-      <li><a routerLink="/charts">Charts</a></li>
-      <li><a routerLink="/form">Form</a></li>
-      <li><a routerLink="/parent">Parent</a></li>
+      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/books" routerLinkActive="active">Books</a></li>
+      <li><a routerLink="/movies" routerLinkActive="active">Movies</a></li>
+      <li><a routerLink="/charts" routerLinkActive="active">Charts</a></li>
+      <li><a routerLink="/form" routerLinkActive="active">Form</a></li>
+      <li><a routerLink="/parent" routerLinkActive="active">Parent</a></li>
+      <li><a routerLink="/scraping" routerLinkActive="active">Scraping</a></li>
     </ul>
   </nav>
 
@@ -34,4 +35,6 @@
   </div>
 </header>
 
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)" >
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

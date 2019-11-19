@@ -34,7 +34,8 @@
               "node_modules/primeicons/primeicons.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/swup/dist/swup.min.js"
             ]
           },
           "configurations": {
@@ -76,7 +77,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "poc-angular8:build:production"
+              "browserTarget": "poc-angular8:build:production",
+              "proxyConfig": "../src/proxy.conf.json"
             }
           }
         },

@@ -22,6 +22,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { ScrapingComponent } from './scraping/scraping.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ChildComponent } from './parent/child/child.component';
     ChartjsComponent,
     FormComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ScrapingComponent
   ],
   imports: [
     ReactiveFormsModule,

@@ -1,0 +1,28 @@
+2019/11/19-14:05:17.668 7195 Reusing MANIFEST Session Storage/MANIFEST-000001
+2019/11/19-14:10:14.518 7545 Level-0 table #5: started
+2019/11/19-14:10:14.534 7545 Level-0 table #5: 17894 bytes OK
+2019/11/19-14:10:14.541 7545 Delete type=0 #3
+2019/11/19-14:15:07.731 7601 Level-0 table #7: started
+2019/11/19-14:15:07.734 7601 Level-0 table #7: 20000 bytes OK
+2019/11/19-14:15:07.745 7601 Delete type=0 #4
+2019/11/19-14:22:24.054 7969 Level-0 table #9: started
+2019/11/19-14:22:24.063 7969 Level-0 table #9: 20267 bytes OK
+2019/11/19-14:22:24.068 7969 Delete type=0 #6
+2019/11/19-14:27:39.157 7a9d Level-0 table #11: started
+2019/11/19-14:27:39.161 7a9d Level-0 table #11: 16749 bytes OK
+2019/11/19-14:27:39.167 7a9d Delete type=0 #8
+2019/11/19-14:30:08.620 7a9d Level-0 table #13: started
+2019/11/19-14:30:08.624 7a9d Level-0 table #13: 17025 bytes OK
+2019/11/19-14:30:08.632 7a9d Delete type=0 #10
+2019/11/19-14:35:26.724 7ecb Level-0 table #15: started
+2019/11/19-14:35:26.728 7ecb Level-0 table #15: 16822 bytes OK
+2019/11/19-14:35:26.734 7ecb Delete type=0 #12
+2019/11/19-14:35:26.734 7ecb Compacting 4@0 + 1@1 files
+2019/11/19-14:35:26.738 7ecb Generated table #16@0: 88 keys, 27158 bytes
+2019/11/19-14:35:26.738 7ecb Compacted 4@0 + 1@1 files => 27158 bytes
+2019/11/19-14:35:26.741 7ecb compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/11/19-14:35:26.741 7ecb Delete type=2 #9
+2019/11/19-14:35:26.741 7ecb Delete type=2 #11
+2019/11/19-14:35:26.741 7ecb Delete type=2 #15
+2019/11/19-14:35:26.741 7ecb Delete type=2 #7
+2019/11/19-14:35:26.742 7ecb Delete type=2 #13
