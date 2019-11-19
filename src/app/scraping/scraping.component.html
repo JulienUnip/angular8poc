@@ -1,5 +1,7 @@
 <div class="_container content">
     <h1>Scraping</h1>
 
-    {{response}}
+    <div *ngFor="let title of titles">
+        <p>Products : {{title}}</p>
+    </div>
 </div>

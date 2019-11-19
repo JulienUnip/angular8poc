@@ -13,14 +13,27 @@ export class ScrapingComponent implements OnInit {
   constructor(private scrapingService: ScrapingService, private router: Router) { }
 
   response = "";
+  datas = [];
+  titles = [];
 
   ngOnInit() {
     this.scrapingService.getDatas().subscribe(scrapped => {
-        $(document).ready(function() {
-          let htmlScrapped = document.createElement('div');
-          htmlScrapped.innerHTML = scrapped;
-          console.log($(htmlScrapped).find(".prc").text());
+        this.response = scrapped;
+        let titles = [];
+        let htmlScrapped = document.createElement('div');
+
+        htmlScrapped.innerHTML = scrapped;
+
+        $(htmlScrapped).find(".lvtitle a").each(function(index, value) {
+            titles.push($(value).text());
         });
+
+        console.log("titles : ", titles);
+
+        this.titles = titles;
+
+        console.log("this.titles", this.titles);
+
     });
   };
 
