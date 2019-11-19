@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrapingService } from '../services/scraping/scraping.service';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-scraping',
@@ -14,9 +15,13 @@ export class ScrapingComponent implements OnInit {
   response = "";
 
   ngOnInit() {
-    this.scrapingService.getDatas().subscribe(val => this.response = val);
-
-    console.log('response = ', this.response);
+    this.scrapingService.getDatas().subscribe(scrapped => {
+        $(document).ready(function() {
+          let htmlScrapped = document.createElement('div');
+          htmlScrapped.innerHTML = scrapped;
+          console.log($(htmlScrapped).find(".prc").text());
+        });
+    });
   };
 
 }
