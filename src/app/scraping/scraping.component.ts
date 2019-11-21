@@ -15,13 +15,18 @@ export class ScrapingComponent implements OnInit {
   response = "";
   datas = [];
   titles = [];
+  prices = [];
+  images = [];
 
   ngOnInit() {
     this.scrapingService.getDatas().subscribe(scrapped => {
+        console.log(scrapped.body);
         this.response = scrapped;
         let titles = [];
-        let htmlScrapped = document.createElement('div');
+        let prices = [];
+        let images = [];
 
+        let htmlScrapped = document.createElement('div');
         htmlScrapped.innerHTML = scrapped;
 
         $(htmlScrapped).find(".lvtitle a").each(function(index, value) {

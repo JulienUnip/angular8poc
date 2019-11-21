@@ -9,9 +9,12 @@ export class ScrapingService {
 
     constructor(private http: HttpClient) {}
 
-    urlToScrap = 'https://www.ebay.fr/sch/mojujul-ewt3xn/m.html?_nkw=&_armrs=1&_ipg=&_from=';
+    urlToScrap = 'http://localhost:8081/scrape';
 
     getDatas() {
-      return this.http.get(this.urlToScrap, {responseType: "text"})
+      const headers = new HttpHeaders({
+        'Access-Control-Allow-Origin':'*',
+      });
+      return this.http.get(this.urlToScrap, {responseType: "text", headers})
     };
 }
